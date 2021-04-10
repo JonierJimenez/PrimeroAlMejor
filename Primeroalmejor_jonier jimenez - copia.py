@@ -50,10 +50,10 @@ class AStar(object):
         this cell and the ending cell multiply by 10.
 
         @param cell
-        @returns heuristic value H
+        @returns heuristic value Hreturn 10 * (abs(cell.x - self.end.x) + abs(cell.y - self.end.y))
         return sqrt((self.end.x-cell.x)**2 + (self.end.y-cell.y)**2)
         """
-        return 10 * (abs(cell.x - self.end.x) + abs(cell.y - self.end.y))
+        return sqrt((self.end.x-cell.x)**2 + (self.end.y-cell.y)**2)
 
     def get_cell(self, x, y):
         """
